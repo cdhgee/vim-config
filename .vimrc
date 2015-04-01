@@ -25,7 +25,6 @@
   Plugin 'bling/vim-airline'
   Plugin 'bling/vim-bufferline'
   Plugin 'osyo-manga/vim-over'
-  Plugin 'spf13/vim-autoclose'
   Plugin 'myusuf3/numbers.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
 
@@ -53,7 +52,7 @@
   scriptencoding utf-8 " not entirely sure what this does, but hey, whatever
   set autochdir " automatically cd into the directory of the current file
   set autowrite " automatically write to disk when leaving a buffer
-  set background=dark " assume a dark background
+  set background=light " use a light background
   set backspace=indent,eol,start " makes backspace more flexible
   set nobackup " turn on backups
   set clipboard+=unnamed " allow access to the windows clipboard
