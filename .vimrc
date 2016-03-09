@@ -36,6 +36,7 @@
   " HTML
   Plugin 'amirh/HTML-AutoCloseTag'
   Plugin 'hail2u/vim-css3-syntax'
+  Plugin 'digitaltoad/vim-pug'
 
   "PowerShell
   Plugin 'PProvost/vim-ps1'
