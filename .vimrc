@@ -25,6 +25,7 @@
   Plugin 'bling/vim-airline'
   Plugin 'bling/vim-bufferline'
   Plugin 'osyo-manga/vim-over'
+  "Plugin 'myusuf3/numbers.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
 
   " Language support
