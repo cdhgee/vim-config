@@ -25,20 +25,27 @@
   Plugin 'bling/vim-airline'
   Plugin 'bling/vim-bufferline'
   Plugin 'osyo-manga/vim-over'
-  Plugin 'myusuf3/numbers.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
 
-  " Javascript
-  Plugin 'elzr/vim-json'
+  " Language support
+
+  "PowerShell
+  Plugin 'PProvost/vim-ps1'
+
+  " Javascript & JSON
   Plugin 'pangloss/vim-javascript'
+  Plugin 'elzr/vim-json'
+  let g:vim_json_syntax_conceal = 0
+
+  " CoffeeScript
   Plugin 'kchmck/vim-coffee-script'
+
+  " TypeScript
+  Plugin 'leafgarland/typescript-vim'
 
   " HTML
   Plugin 'amirh/HTML-AutoCloseTag'
   Plugin 'hail2u/vim-css3-syntax'
-
-  "PowerShell
-  Plugin 'PProvost/vim-ps1'
 
   call vundle#end()
 
