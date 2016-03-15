@@ -44,9 +44,12 @@
   " TypeScript
   Plugin 'leafgarland/typescript-vim'
 
-  " HTML
+  " HTML & CSS
   Plugin 'amirh/HTML-AutoCloseTag'
   Plugin 'hail2u/vim-css3-syntax'
+
+  " Pug (formerly Jade)
+  Plugin 'digitaltoad/vim-pug'
 
   call vundle#end()
 
@@ -54,10 +57,12 @@
 
   set fileformats=unix,dos,mac " file format order
   set fileformat=unix
+  set fileencoding=utf-8 " format for new files " format for new files
+  set fileencodings=ucs-bom,utf-16le,utf-8,default,latin1 " formats to try when reading files
 
 " General {
   syntax on " enable syntax highlighting
-  scriptencoding utf-8 " not entirely sure what this does, but hey, whatever
+  scriptencoding utf-8 " specifies the encoding used for the remainder of the script
   set autochdir " automatically cd into the directory of the current file
   set autowrite " automatically write to disk when leaving a buffer
   set background=light " use a light background
