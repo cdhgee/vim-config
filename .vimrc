@@ -28,18 +28,29 @@
   "Plugin 'myusuf3/numbers.vim'
   Plugin 'nathanaelkane/vim-indent-guides'
 
-  " Javascript
-  Plugin 'elzr/vim-json'
+  " Language support
+
+  "PowerShell
+  Plugin 'PProvost/vim-ps1'
+
+  " Javascript & JSON
   Plugin 'pangloss/vim-javascript'
+  Plugin 'elzr/vim-json'
+  let g:vim_json_syntax_conceal = 0
+
+  " CoffeeScript
   Plugin 'kchmck/vim-coffee-script'
 
-  " HTML
+  " TypeScript
+  Plugin 'leafgarland/typescript-vim'
+
+  " HTML & CSS
   Plugin 'amirh/HTML-AutoCloseTag'
   Plugin 'hail2u/vim-css3-syntax'
   Plugin 'digitaltoad/vim-pug'
 
-  "PowerShell
-  Plugin 'PProvost/vim-ps1'
+  " Pug (formerly Jade)
+  Plugin 'digitaltoad/vim-pug'
 
   call vundle#end()
 
@@ -47,10 +58,12 @@
 
   set fileformats=unix,dos,mac " file format order
   set fileformat=unix
+  set fileencoding=utf-8 " format for new files " format for new files
+  set fileencodings=ucs-bom,utf-16le,utf-8,default,latin1 " formats to try when reading files
 
 " General {
   syntax on " enable syntax highlighting
-  scriptencoding utf-8 " not entirely sure what this does, but hey, whatever
+  scriptencoding utf-8 " specifies the encoding used for the remainder of the script
   set autochdir " automatically cd into the directory of the current file
   set autowrite " automatically write to disk when leaving a buffer
   set background=light " use a light background
