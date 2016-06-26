@@ -15,6 +15,8 @@
 
 " Plugins {
 "
+
+
   call vundle#begin()
 
   Plugin 'gmarik/Vundle.vim'
@@ -50,6 +52,9 @@
 
   " Pug (formerly Jade)
   Plugin 'digitaltoad/vim-pug'
+
+  " CSV
+  Plugin 'chrisbra/csv.vim'
 
   call vundle#end()
 
@@ -137,8 +142,8 @@
   set infercase " Infer case
   set smartindent
   filetype on
-  syntax enable
   filetype plugin indent on
+  syntax enable
   colorscheme solarized
 " }
 
