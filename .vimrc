@@ -4,6 +4,7 @@ set nocompatible " Make Vim more useful
 " Windows Compatiblity
 if has('win32') || has('win64')
   set runtimepath+=~/.vim/bundle/vundle.vim
+  set renderoptions=
 endif
 
 " Plugins
@@ -23,7 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'godlygeek/tabular'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -86,6 +87,7 @@ if has("gui_running")
   set guioptions-=T " Remove toolbar
   if has("gui_win32") " If MS Windows
     set guifont=Consolas:h10
+    set renderoptions=type:directx,gamma:1.8,contrast:0.5,geom:1,renmode:5,taamode:1,level:0.5
   endif
 endif
 set cursorcolumn " Highlights the current column
