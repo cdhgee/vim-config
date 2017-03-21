@@ -87,7 +87,7 @@ if has("gui_running")
   set guioptions-=T " Remove toolbar
   if has("gui_win32") " If MS Windows
     set guifont=Consolas:h10
-    set renderoptions=type:directx,gamma:1.8,contrast:0.5,geom:1,renmode:5,taamode:1,level:0.5
+    " set renderoptions=type:directx,gamma:1.8,contrast:0.5,geom:1,renmode:5,taamode:1,level:0.5
   endif
 endif
 set cursorcolumn " Highlights the current column
