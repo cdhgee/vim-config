@@ -47,7 +47,7 @@ call vundle#end()
 set modelines=0                                         " turn off modelines for security
 set fileformats=unix,dos,mac                            " file format order
 set fileformat=unix
-set fileencoding=utf-                                   " format for new files
+set fileencoding=utf-8                                  " format for new files
 set fileencodings=utf-8,ucs-bom,utf-16le,default,latin1 " formats to try when reading files
 set encoding=utf-8
 
