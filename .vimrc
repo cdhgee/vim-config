@@ -17,31 +17,30 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 
 " Helpers
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
+" Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-eunuch' " File commands
+Plugin 'tpope/vim-repeat' " Used by other plugins by tpope
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-abolish'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'godlygeek/tabular'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-" Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-abolish' " Advanced search/replace
+Plugin 'tpope/vim-commentary' " Auto commenting
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'nathanaelkane/vim-indent-guides'
-
+" Plugin 'w0rp/ale' " Linting
+Plugin 'w0rp/ale'
 " File formats
 
 Plugin 'PProvost/vim-ps1' " PowerShell
 Plugin 'pangloss/vim-javascript' " Javascript
 Plugin 'elzr/vim-json' " JSON
-let g:vim_json_syntax_conceal = 0
 Plugin 'leafgarland/typescript-vim' " TypeScript
+Plugin 'peitalin/vim-jsx-typescript' " React TSX
 Plugin 'hail2u/vim-css3-syntax' " HTML & CSS
-Plugin 'digitaltoad/vim-pug' " Pug (formerly Jade
+Plugin 'digitaltoad/vim-pug' " Pug
 Plugin 'chrisbra/csv.vim' " CSV
+Plugin 'mxw/vim-jsx' " React JSX
 
 call vundle#end()
 
@@ -79,7 +78,6 @@ set browsedir=buffer                                    " default to open from c
 set showmode                                            " show the current mode
 set showcmd
 set shortmess+=filmnrxoOtT                              " Abbrev. of messages (avoids 'hit enter')
-set relativenumber
 let g:autoclose_vim_commentmode = 1                     " Disable autoclose in vimrc files
 set relativenumber
 
@@ -163,47 +161,8 @@ filetype plugin indent on
 syntax enable
 colorscheme solarized
 
-" NERDTree
-let g:NERDTreeIndicatorMapCustom = {
-  \ "Modified"  : "✹",
-  \ "Staged"    : "✚",
-  \ "Untracked" : "✭",
-  \ "Renamed"   : "➜",
-  \ "Unmerged"  : "═",
-  \ "Deleted"   : "✖",
-  \ "Dirty"     : "✗",
-  \ "Clean"     : "✔︎",
-  \ 'Ignored'   : '☒',
-  \ "Unknown"   : "?"
-\ }
-
-let g:NERDTreeDirArrowExpandable = "▸"
-let g:NERDTreeDirArrowCollapsible = "▾"
-
-" NERDCommenter
-
-" Add spaces after comment delimiters by default
-let g:NERDSpaceDelims = 1
-
-" Use compact syntax for prettified multi-line comments
-let g:NERDCompactSexyComs = 1
-
-" Align line-wise comment delimiters flush left instead of following code indentation
-let g:NERDDefaultAlign = 'left'
-
-" Set a language to use its alternate delimiters by default
-let g:NERDAltDelims_java = 1
-
-" Add your own custom formats or override the defaults
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-
-" Allow commenting and inverting empty lines (useful when commenting a region)
-let g:NERDCommentEmptyLines = 1
-
-" Enable trimming of trailing whitespace when uncommenting
-let g:NERDTrimTrailingWhitespace = 1
-
 " Mappings
+
 " Map control-right to next tab
 nnoremap <silent> <C-right> :tabnext<CR>
 " Map control-left to prev tab
@@ -266,4 +225,9 @@ function! InitializeDirectories()
 endfunction
 call InitializeDirectories()
 
-autocmd vimenter * NERDTree
+" Automatically trim trailing whitespace
+
+autocmd BufWritePre * %s/\s\+$//e
+
+" set filetypes as typescript.jsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
