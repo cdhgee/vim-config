@@ -231,3 +231,5 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " set filetypes as typescript.jsx
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
+
+let g:airline#extensions#ale#enabled = 1
