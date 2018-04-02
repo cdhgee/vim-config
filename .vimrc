@@ -28,8 +28,9 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'nathanaelkane/vim-indent-guides'
-" Plugin 'w0rp/ale' " Linting
-Plugin 'w0rp/ale'
+Plugin 'w0rp/ale' " Linting
+" Plugin 'Valloric/YouCompleteMe' " Code completion
+
 " File formats
 
 Plugin 'PProvost/vim-ps1' " PowerShell
@@ -233,3 +234,6 @@ autocmd BufWritePre * %s/\s\+$//e
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.jsx
 
 let g:airline#extensions#ale#enabled = 1
+
+" Disable JSON string concealment
+let g:vim_json_syntax_conceal = 0
