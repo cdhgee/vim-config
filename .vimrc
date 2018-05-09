@@ -18,69 +18,114 @@ Plugin 'altercation/vim-colors-solarized'
 
 " Helpers
 " Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-eunuch' " File commands
-Plugin 'tpope/vim-repeat' " Used by other plugins by tpope
+" File commands
+Plugin 'tpope/vim-eunuch'
+" Used by other plugins by tpope
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-abolish' " Advanced search/replace
-Plugin 'tpope/vim-commentary' " Auto commenting
+" Advanced search/replace
+Plugin 'tpope/vim-abolish'
+" Auto commenting
+Plugin 'tpope/vim-commentary'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'osyo-manga/vim-over'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'w0rp/ale' " Linting
-" Plugin 'Valloric/YouCompleteMe' " Code completion
+" Code completion
+" Plugin 'Valloric/YouCompleteMe'
 
 " File formats
 
-Plugin 'PProvost/vim-ps1' " PowerShell
-Plugin 'pangloss/vim-javascript' " Javascript
-Plugin 'elzr/vim-json' " JSON
-Plugin 'leafgarland/typescript-vim' " TypeScript
-Plugin 'peitalin/vim-jsx-typescript' " React TSX
-Plugin 'hail2u/vim-css3-syntax' " HTML & CSS
-Plugin 'digitaltoad/vim-pug' " Pug
-Plugin 'chrisbra/csv.vim' " CSV
-Plugin 'mxw/vim-jsx' " React JSX
+" PowerShell
+Plugin 'PProvost/vim-ps1'
+" Javascript
+Plugin 'pangloss/vim-javascript'
+" JSON
+Plugin 'elzr/vim-json'
+" TypeScript
+Plugin 'leafgarland/typescript-vim'
+" React TSX
+Plugin 'peitalin/vim-jsx-typescript'
+" HTML & CSS
+Plugin 'hail2u/vim-css3-syntax'
+" Pug
+Plugin 'digitaltoad/vim-pug'
+" CSV
+Plugin 'chrisbra/csv.vim'
+" React JSX
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 
-set modelines=0                                         " turn off modelines for security
-set fileformats=unix,dos,mac                            " file format order
+" turn off modelines for security
+set modelines=0
+" file format order
+set fileformats=unix,dos,mac
 set fileformat=unix
-set fileencoding=utf-8                                  " format for new files
-set fileencodings=utf-8,ucs-bom,utf-16le,default,latin1 " formats to try when reading files
+" format for new files
+set fileencoding=utf-8
+" formats to try when reading files
+set fileencodings=utf-8,ucs-bom,utf-16le,default,latin1
 set encoding=utf-8
 
-                                                        " General
-syntax on                                               " enable syntax highlighting
-scriptencoding utf-8                                    " specifies the encoding used for the remainder of the script
-set autochdir                                           " automatically cd into the directory of the current file
-set autowrite                                           " automatically write to disk when leaving a buffer
-set background=dark                                     " use a light background
-set backspace=indent,eol,start                          " makes backspace more flexible
-set nobackup                                            " turn on backups
-set clipboard+=unnamed                                  " allow access to the windows clipboard
-set hidden                                              " allow change of buffers witout saving
-set history=1000                                        " store lots of history (default is 20)
-set iskeyword +=_,$,@,$,#                               " none of these are word dividers
-set mouse=a                                             " enable mouse usage
-set noerrorbells                                        " quiet
-set shortmess+=filmnrxoOtT                              " abbreviate status line messages (avoids 'hit enter')
-set undofile                                            " persist undo information across sessions by storing info in a file
-set undolevels=1000                                     " maximum number of changes that can be undone
-set undoreload=10000                                    " maximum number lines to save for undo on a buffer reload
-set viewoptions=folds,options,cursor,unix,slash         " better unix / windows compatibility
-set virtualedit=onemore                                 " allow for cursor beyond last character
-set whichwrap=<,>,[,]                                   " Arrow keys move between lines in all modes
-set wildmenu                                            " turn on command line completion wild style
-set wildmode=list:longest,full                          " lists longest matching string from possibles
-set browsedir=buffer                                    " default to open from current buffer's directory
-set showmode                                            " show the current mode
+" General
+
+" enable syntax highlighting
+syntax on
+" specifies the encoding used for the remainder of the script
+scriptencoding utf-8
+" automatically cd into the directory of the current file
+set autochdir
+" automatically write to disk when leaving a buffer
+set autowrite
+" use a light background
+set background=dark
+" makes backspace more flexible
+set backspace=indent,eol,start
+" turn on backups
+set nobackup
+" allow access to the windows clipboard
+set clipboard+=unnamed
+" allow change of buffers witout saving
+set hidden
+" store lots of history (default is 20)
+set history=1000
+" none of these are word dividers
+set iskeyword +=_,$,@,$,#
+" enable mouse usage
+set mouse=a
+" quiet
+set noerrorbells
+" abbreviate status line messages (avoids 'hit enter')
+set shortmess+=filmnrxoOtT
+" persist undo information across sessions by storing info in a file
+set undofile
+set undolevels=1000
+" Maximum number lines to save for undo on a buffer reload
+set undoreload=10000
+" better unix / windows compatibility
+set viewoptions=folds,options,cursor,unix,slash
+" allow for cursor beyond last character
+set virtualedit=onemore
+" Arrow keys move between lines in all modes
+set whichwrap=<,>,[,]
+" turn on command line completion wild style
+set wildmenu
+" lists longest matching string from possibles
+set wildmode=list:longest,full
+" default to open from current buffer's directory
+set browsedir=buffer
+" show the current mode
+set showmode
 set showcmd
-set shortmess+=filmnrxoOtT                              " Abbrev. of messages (avoids 'hit enter')
-let g:autoclose_vim_commentmode = 1                     " Disable autoclose in vimrc files
-set relativenumber
+" Abbrev. of messages (avoids 'hit enter')
+set shortmess+=filmnrxoOtT
+" Disable autoclose in vimrc files
+let g:autoclose_vim_commentmode = 1
+" Disable relative line numbering
+set norelativenumber
 
                                                         " UI
 if has("gui_running")
