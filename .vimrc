@@ -1,9 +1,10 @@
 " Environment
 set nocompatible " Make Vim more useful
 
+set runtimepath+=~/.vim/bundle/Vundle.vim
+
 " Windows Compatiblity
 if has('win32') || has('win64')
-  set runtimepath+=~/.vim/bundle/vundle.vim
   set renderoptions=
 endif
 
